@@ -1,0 +1,159 @@
+/* Define as propriedades para todos os elementos */
+* {
+    box-sizing: border-box; /* Garante que o padding e border não afetem o tamanho total do elemento */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove padding padrão */
+    color: white; /* Define a cor do texto para branco */
+}
+
+/* Estilos para o corpo da página */
+body {
+    /* Gradiente de fundo para o corpo da página */
+    background: linear-gradient(125deg, #FFF, #ad0f0f);
+    background-repeat: no-repeat;
+    background: cover;
+    height: 100vh; /* Altura igual à altura da viewport */
+    display: flex; /* Container flexível */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    justify-content: center; /* Alinha horizontalmente os itens ao centro */
+}
+
+/* Pseudo-elemento ::before para o corpo da página */
+body::before {
+    /* Imagem de fundo */
+    background-image: url("img/code.png");
+    background-repeat: no-repeat; /* Não repetir a imagem de fundo */
+    background-position: right; /* Posição da imagem à direita */
+    content: ""; /* Cria um conteúdo pseudo-elemento */
+    display: block; /* Torna o elemento em bloco para ocupar todo o espaço do body */
+    position: absolute; /* Posicionamento absoluto */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    opacity: 0.4; /* Opacidade para efeito de transparência */
+}
+
+/* Estilos para o container principal */
+.container {
+    width: 80%; /* Largura do container */
+    height: 80%; /* Altura do container */
+    display: flex; /* Container flexível */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    border-radius: 24px; /* Borda arredondada */
+    border: 1px solid #ad0f0f; /* Cor da borda */
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15); /* Sombra */
+    background-image: url("img/Ruido.png"); /* Imagem de fundo */
+    background-size: 100% 100%; /* Tamanho da imagem de fundo */
+    position: relative; /* Posição relativa para elementos filhos */
+}
+
+/* Estilos para o conteúdo dentro do container */
+.container__conteudo {
+    display: flex; /* Container flexível */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    position: absolute; /* Posicionamento absoluto */
+    bottom: 0; /* Alinha ao final do container */
+}
+
+/* Estilos para as informações do jogo */
+.container__informacoes {
+    flex: 1; /* Amplia para ocupar espaço disponível */
+    padding: 3rem; /* Espaçamento interno - definindo um tamanho que é 3 vezes o tamanho do elemento raiz*/
+}
+
+/* Estilos para os botões */
+.container__botao {
+    /* Estilos comuns para os botões */
+    border-radius: 16px;
+    background: #ad0f0f;
+    padding: 16px 24px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    margin-top: 2rem;
+}
+
+/* Estilos para o texto */
+.container__texto {
+    margin: 16px 0 16px 0; /* Margem do texto */
+}
+
+/* Estilos para o texto em azul */
+.container__texto-azul {
+    color: #ad0f0f; /* Cor do texto em azul */
+}
+
+/* Estilos para o input */
+.container__input {
+    /* Estilos para o input */
+    width: 100%;
+    height: 72px;
+    border-radius: 16px;
+    background-color: #FFF;
+    border: none;
+    color: #ad0f0f;
+    padding: 2rem;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif; /* Fonte personalizada */
+}
+
+/* Estilos para o grupo de botões */
+.container__botoes {
+    display: flex; /* Container flexível */
+    gap: 2em; /* Espaçamento entre os botões */
+}
+
+/* Estilos para o título h1 */
+h1 {
+    font-family: 'Chakra Petch', sans-serif; /* Fonte personalizada */
+    font-size: 72px; /* Tamanho da fonte */
+    padding-bottom: 3rem; /* Espaçamento inferior */
+}
+
+/* Estilos para parágrafos e botões */
+p, button {
+    font-family: 'Inter', sans-serif; /* Fonte personalizada */
+}
+
+/* Estilos para o parágrafo de texto */
+.texto__paragrafo {
+    font-size: 32px; /* Tamanho da fonte */
+    font-weight: 400; /* Peso da fonte */
+}
+
+/* Estilos para o botão desativado */
+button:disabled {
+    background-color: gray; /* Cor de fundo cinza para botão desativado */
+}
+
+/* Media query para telas menores */
+@media screen and (max-width: 1250px) {
+    /* Ajuste de estilos para telas menores */
+
+    h1 {
+        font-size: 50px; /* Tamanho da fonte do título */
+    }
+
+    .container__botao {
+        font-size: 16px; /* Tamanho da fonte dos botões */
+    }
+
+    .texto__paragrafo {
+        font-size: 24px; /* Tamanho da fonte do parágrafo */
+    }
+
+    .container__imagem-pessoa {
+        display: none; /* Esconde a imagem em telas menores */
+    }
+
+    .container__conteudo {
+        display: block; /* Exibe o conteúdo em bloco */
+        position: inherit; /* Posição padrão */
+    }
+
+    .container__informacoes {
+        padding: 1rem; /* Espaçamento interno reduzido */
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Configura a visualização para dispositivos variados -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Inclui a biblioteca ResponsiveVoice para síntese de voz -->
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <!-- Links para as fontes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importa as fontes Chakra Petch e Inter para uso no documento -->
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Link para o arquivo CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Game</title>
+</head>
+
+<body>
+    <!-- Conteúdo principal da página -->
+    <div class="container">
+        <div class="container__conteudo">
+            <div class="container__informacoes">
+                <!-- Texto principal e instruções do jogo -->
+                <div class="container__texto">
+                    
+                    <h1>Adivinhe o <span class="container__texto-azul">numero secreto</span></h1>
+                    <p class="texto__paragrafo">Escolha um número entre 1 a 10</p>
+                </div>
+                <!-- Input para o usuário inserir o palpite -->
+                <input type="number" min="1" max="10" class="container__input">
+                <!-- Botões para verificar o palpite e reiniciar o jogo -->
+                <div class="chute container__botoes">
+                    <button onclick="verificarChute()" class="container__botao">Chutar</button>
+                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled>Novo jogo</button>
+                </div>
+            </div>
+            <!-- Imagem decorativa -->
+            <img src="./img/BH27.png" alt="Uma pessoa olhando para a esquerda" class="container__imagem-pessoa" />
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="app.js" defer></script>
+  
+</body>
+
+</html>
